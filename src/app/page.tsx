@@ -151,9 +151,9 @@ export default function LandingPage() {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end relative">
           <img 
-            src="/images/homepage/monarch-dashboard.png" 
-            alt="Monarch Dashboard" 
-            className="w-full max-w-[560px] h-auto object-contain transition-transform duration-700 hover:scale-[1.01] rounded-2xl shadow-[0_0_40px_rgba(255,255,255,0.1)]" 
+            src="/images/homepage/hero-illustration.png" 
+            alt="Monarch Architecture Diagram" 
+            className="w-full max-w-[560px] h-auto object-contain transition-transform duration-700 hover:scale-[1.01] dark:invert" 
           />
         </div>
       </section>
