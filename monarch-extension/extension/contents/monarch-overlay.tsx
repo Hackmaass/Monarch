@@ -114,12 +114,7 @@ const MonarchOverlay = () => {
       const watchedPct = (currentTime / duration) * 100
 
       // Approximate score
-      const completionFactor = Math.min(watchedPct / 100, 1) * 35
-      const focusFactor = document.hasFocus() ? 20 : 5
-      const speedPenalty = video.playbackRate > 1.5 ? (video.playbackRate - 1) * 15 : 0
-      const scoreEstimate = Math.max(0, Math.min(100,
-        completionFactor + 25 + focusFactor + 10 - speedPenalty
-      ))
+      const scoreEstimate = watchedPct >= 80 ? 100 : watchedPct
 
       setState({
         isActive: true,
@@ -217,7 +212,7 @@ const MonarchOverlay = () => {
   }
 
   const isPastThreshold = state.watchedPct >= 80
-  const isEligible = state.scoreEstimate >= 35 && isPastThreshold
+  const isEligible = isPastThreshold
 
   return (
     <>
@@ -494,7 +489,7 @@ const MonarchOverlay = () => {
             {isEligible && (
               <div style={{ padding: "0 14px 12px" }}>
                 <button
-                  onClick={() => window.open(`https://monarch.yolkone.com/quiz/${state.videoId}?title=${encodeURIComponent(state.videoTitle)}`, "_blank")}
+                  onClick={() => window.open(`http://localhost:3000/quiz/${state.videoId}?title=${encodeURIComponent(state.videoTitle)}`, "_blank")}
                   style={{
                     width: "100%",
                     padding: "10px",

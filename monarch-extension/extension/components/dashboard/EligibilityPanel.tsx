@@ -59,22 +59,6 @@ export const EligibilityPanel: React.FC<EligibilityPanelProps> = ({
 
         {/* Requirements */}
         <div className="space-y-4">
-          {/* Score requirement */}
-          <div>
-            <div className="flex items-center justify-between mb-1.5">
-              <span className="meta-label !text-[8px] opacity-40">Min Score: {SCORE_THRESHOLD}</span>
-              <span className={`text-[10px] font-black heading-heavy ${scoreMet ? "text-emerald-500" : "text-white"}`}>
-                {score.toFixed(0)} / {SCORE_THRESHOLD}
-              </span>
-            </div>
-            <div className="progress-container !h-1">
-              <div
-                className={`progress-fill ${scoreMet ? "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" : "bg-amber-500"}`}
-                style={{ width: `${scoreProgress}%` }}
-              />
-            </div>
-          </div>
-
           {/* Completion requirement */}
           <div>
             <div className="flex items-center justify-between mb-1.5">

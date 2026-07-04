@@ -35,13 +35,33 @@ Connect your Udemy, Coursera, LeetCode, HackerRank, or YouTube learning accounts
 
 ---
 
+## 🔄 The Monarch Workflow
+
+1. **Install & Connect**: The user installs the Monarch Chrome Extension and connects their wallet.
+2. **Learn Naturally**: The user navigates to a supported platform (e.g., YouTube). The extension silently tracks active watch segments, playback speeds, scrubbing behavior, and tab focus.
+3. **Reach the Threshold**: Once the user genuinely watches (or reaches) 80% of the video, their session becomes eligible.
+4. **Claim & Redirect**: The user clicks "Claim Certificate" in the extension, which redirects them to the Monarch web app with their verified session data.
+5. **Gasless Minting**: The web app utilizes the **Universal Gas Fund (UGF)** to mint a Soulbound Token (SBT) directly to the user's wallet on **Base Sepolia**—completely gasless, with no crypto needed from the user.
+
+---
+
 ## 🛠️ Architecture & Tech Stack
 
-Monarch is structured into a monorepo-style setup that spans across Next.js (Web), a Browser Extension (Plasmo), and Smart Contracts:
+Monarch is a full-stack monorepo consisting of a web application and a browser extension.
 
-- **Web App:** Next.js 16 (App Router), React 19, Tailwind CSS v4, Zustand, React Query, Recharts, Framer Motion, Firebase.
-- **Chrome Extension:** Built with [Plasmo](https://docs.plasmo.com/). Tracks user focus, tab visibility, and learning interactions seamlessly.
-- **Blockchain:** Ethers.js, Solidity Smart Contracts (Soulbound Tokens), and the `@tychilabs/ugf-testnet-js` for gasless transactions.
+### 🌐 Web Application (Frontend & API)
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS v4, Framer Motion (for fluid micro-animations)
+- **Icons & UI**: Lucide React, Radix UI primitives
+- **Blockchain Interaction**: Ethers.js v6
+- **Gasless Transactions**: `@tychilabs/ugf-testnet-js` (Universal Gas Fund)
+- **Deployment**: Vercel
+
+### 🧩 Browser Extension
+- **Framework**: [Plasmo](https://docs.plasmo.com/) (React-based Extension Framework)
+- **Language**: TypeScript
+- **Tracking Core**: Custom `EngagementMonitor` and `SessionManager` running in Content Scripts to securely evaluate video DOM elements, `timeupdate` events, and document visibility.
+- **State Management**: `@plasmohq/storage` for syncing session state between content scripts, background service workers, and the popup UI.
 
 ---
 

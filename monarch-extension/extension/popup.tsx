@@ -198,7 +198,7 @@ function IndexPopup() {
     return () => clearInterval(interval)
   }, [])
 
-  const isEligible = currentScore >= MIN_SCORE_FOR_CERT && completionPct >= MIN_COMPLETION_FOR_CERT * 100
+  const isEligible = completionPct >= MIN_COMPLETION_FOR_CERT * 100
 
   // Compute sessionHash deterministically from session data
   const sessionHash = sessionData

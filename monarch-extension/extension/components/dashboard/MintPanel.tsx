@@ -37,7 +37,7 @@ export const MintPanel: React.FC<MintPanelProps> = ({
     }
 
     const url =
-      `https://monarchweb-pi.vercel.app/claim` +
+      `https://monarch-ten-nu.vercel.app/claim` +
       `?wallet=${encodeURIComponent(walletAddress)}` +
       `&score=${score ?? 0}` +
       `&course=${encodeURIComponent(videoTitle || "Monarch Certificate")}` +
