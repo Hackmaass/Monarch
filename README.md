@@ -4,7 +4,7 @@
 
 Monarch builds a credibility verification layer for online learning platforms. We verify whether you actually understood the content — not just clicked through it. Blockchain-backed, gasless, and genuinely trustworthy.
 
-[![Monarch Architecture Diagram](./public/images/homepage/hero-illustration.png)](https://github.com/Hackmaass/Monarch)
+
 
 ---
 
@@ -15,33 +15,23 @@ Developers and students are tired of meaningless completion badges. Traditional 
 
 ### 1. Verify Real Learning
 We track active watch patterns, quiz consistency, engagement depth, and solving behavior to determine if you genuinely learned — no more meaningless completion badges.
-<p align="center">
-  <img src="./public/images/homepage/trackYourReadingDark.png" alt="Learning credibility verification dashboard" width="600"/>
-</p>
+
 
 ### 2. Deep Analytics & Trust Score
 See detailed breakdowns of watch presence, tab focus rates, playback patterns, code originality scores, and solving consistency metrics. Your **Monarch Score** reflects genuine understanding across platforms.
-<p align="center">
-  <img src="./public/images/homepage/unlockStatsDark.png" alt="Learning credibility analytics" width="600"/>
-</p>
+
 
 ### 3. Blockchain-Backed Certificates (Gasless)
 Mint tamper-proof Soulbound Tokens (SBTs) as proof of verified learning. Powered by the **Universal Gas Fund (UGF)**, meaning all blockchain transactions are sponsored in the background. **No ETH or crypto wallet required.**
-<p align="center">
-  <img src="./public/images/homepage/createCollectionsDark.png" alt="Blockchain certificate minting" width="400"/>
-</p>
+
 
 ### 4. Recruiter Verification Portal
 Generate verification links that let employers audit your learning credentials — watch depth, solve patterns, and trust metrics — all on-chain and verifiable.
-<p align="center">
-  <img src="./public/images/homepage/readReviewsDark.png" alt="Recruiter verification portal" width="400"/>
-</p>
+
 
 ### 5. Seamless Platform Integration
 Connect your Udemy, Coursera, LeetCode, HackerRank, or YouTube learning accounts. The Monarch extension silently monitors your real engagement.
-<p align="center">
-  <img src="./public/images/homepage/discoverBooksDark.png" alt="Platform integrations" width="400"/>
-</p>
+
 
 ---
 
