@@ -1,0 +1,65 @@
+# Monarch - Technical and Fundamental Context
+
+## 1. Fundamental Context
+**Overview**: 
+Monarch is a credibility verification layer for online learning platforms. It aims to verify genuine learning rather than just clicking through a course, solving the problem of meaningless completion badges by proving actual understanding and engagement.
+
+**Key Features**:
+- **Verify Real Learning**: Tracks active watch patterns, quiz consistency, engagement depth, and solving behavior.
+- **Deep Analytics & Trust Score**: Provides detailed breakdowns of watch presence, tab focus rates, playback patterns, code originality scores, and solving consistency metrics. The "Monarch Score" reflects genuine understanding.
+- **Blockchain-Backed Certificates**: Issues tamper-proof Soulbound Tokens (SBTs) as proof of verified learning. Transactions are gasless and sponsored in the background using the Universal Gas Fund (UGF). No ETH or crypto wallet is required.
+- **Recruiter Verification Portal**: Generates verification links allowing employers to audit learning credentials (watch depth, solve patterns, trust metrics) on-chain.
+- **Seamless Platform Integration**: Connects with Udemy, Coursera, LeetCode, HackerRank, and YouTube. A browser extension silently monitors real engagement.
+
+**Team**:
+Six developers from Pune, India: Omkar Rane, Sarthak Godse, Bhavjyot Singh, Saksham Patil, Vishnu Waghmare, Jay Magar.
+
+---
+
+## 2. Technical Context & Architecture
+
+**Monorepo-style structure** spanning a Web App, a Browser Extension, and Smart Contracts.
+
+### Tech Stack Details:
+- **Web App (Next.js)**: 
+  - Framework: Next.js 16 (App Router), React 19
+  - Styling: Tailwind CSS v4, tw-animate-css
+  - State Management: Zustand, React Query (@tanstack/react-query)
+  - UI/Animations: Framer Motion, Recharts, shadcn, lucide-react, @base-ui/react
+  - Backend/Auth: Firebase
+  - Web3 Integration: Ethers.js, @tychilabs/ugf-testnet-js
+
+- **Chrome Extension**: 
+  - Built with: Plasmo
+  - Purpose: Tracks user focus, tab visibility, and learning interactions seamlessly across supported platforms.
+
+- **Blockchain / Smart Contracts**: 
+  - Contracts: Solidity Smart Contracts (Soulbound Tokens)
+  - Gasless Infrastructure: `@tychilabs/ugf-testnet-js` for sponsoring Universal Gas Fund (UGF) transactions.
+
+---
+
+## 3. Design System & UI Principles
+
+**Core Visual Identity**: Premium, aesthetic, and sleek.
+- **Color Palette**: 
+  - Background: Pure Deep Black (`#000000`)
+  - Text Primary: High-Contrast White (`#FFFFFF`)
+  - Text Secondary/Tertiary: Translucent White (`rgba(255, 255, 255, 0.4)` & `0.2`)
+  - Accents: Emerald (`#10b981` Live/Success), Amber (`#f59e0b`), Purple (`#a855f7`), Blue (`#3b82f6`).
+
+**CSS Utilities / Styling**:
+- **Backgrounds**: Mesh gradient with radial gradients (`.mesh-gradient`).
+- **Glassmorphism**: Translucent glass card panels (`.premium-glass`) with blur filters and subtle borders.
+- **Typography**: 
+  - Primary Headings: Heavy/Black weight, extremely tight tracking, UPPERCASE.
+  - System Labels: Very small (10px), super bold, high letter spacing (`tracking-[0.3em]`), UPPERCASE.
+- **Buttons**:
+  - Primary: Pure solid white with black text.
+  - Secondary: Translucent grey/white border buttons.
+
+**Micro-Animations**:
+- Hover transitions with smooth cubic-bezier timing (`300ms` or `500ms`).
+- Dynamic glows (ambient blobs fading/pulsing).
+- Interactive scaling: subtle scale-up on hover (`scale(1.03)`), depress on click (`scale(0.97)`).
+- Live network tags feature a pulsing green indicator.
